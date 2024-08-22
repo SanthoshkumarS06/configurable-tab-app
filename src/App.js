@@ -17,6 +17,8 @@ function App() {
   }, []);
 
   const handleClick = () => {
+    microsoftTeams.pages.config.setValidityState(true);
+    
     microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
       const configPromise = microsoftTeams.pages.config.setConfig({
         suggestedDisplayName: "CrudTeamsWebpart2",
